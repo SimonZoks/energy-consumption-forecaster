@@ -3,7 +3,7 @@
 This project delivers an end-to-end Machine Learning and Deep Learning time-series forecasting system designed to predict smart home energy consumption 24 hours into the future. By evaluating advanced ensemble methods and a deep Sequence-to-Sequence LSTM architecture on chronological data, the system establishes a robust pipeline for optimized grid load management and automated smart home scheduling.
 
 ## 📺 Project Resources & Demo
-* **[Video Presentation on YouTube]([https://youtu.be/wvivLxtCHig])**
+* **[Video Presentation on YouTube](https://youtu.be/wvivLxtCHig)**
 * **[Project Dataset on Google Drive](https://drive.google.com/drive/folders/15Bled-ImrJ3UeZizZZQqNb8JCmB_UovS?usp=sharing)**
 
 ---
