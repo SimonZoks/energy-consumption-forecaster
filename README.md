@@ -104,11 +104,11 @@ A production-ready microservice architecture strategy for this pipeline includes
    cd energy-consumption-forecaster
 
 
-Install dependencies:
-
+1. Install dependencies:
 pip install -r requirements.txt
 
-Prepare the Data Directory:
+---
+2. Prepare the Data Directory:
 Place household_power_consumption.txt inside the data/ subfolder:
 
 ├── data/
@@ -116,5 +116,6 @@ Place household_power_consumption.txt inside the data/ subfolder:
 ├── main_notebook.ipynb
 └── README.md
 
-Run Jupyter Notebook:
+---
+3. Run Jupyter Notebook:
 jupyter notebook main_notebook.ipynb
