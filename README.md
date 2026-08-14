@@ -110,12 +110,12 @@ pip install -r requirements.txt
 
 
 2. Prepare the Data Directory:
-Place household_power_consumption.txt inside the data/ subfolder:
+Place `household_power_consumption.txt` inside the `data/` subfolder:
 
-├── data/
-│   └── household_power_consumption.txt
-├── main_notebook.ipynb
-└── README.md
+   data/
+     └── household_power_consumption.txt
+   main_notebook.ipynb
+   README.md
 
 
 3. Run Jupyter Notebook:
