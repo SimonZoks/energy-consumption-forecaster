@@ -1,3 +1,4 @@
+Markdown
 # ⚡ Energy Consumption Forecaster
 
 > **Domain:** Smart Home / Energy Management  
@@ -35,19 +36,13 @@ Evaluated using 5-Fold Walk-Forward Cross-Validation:
 * **Gradient Boosting Regressor** (`n_estimators=100`)
 * **XGBoost Regressor** (`learning_rate=0.05`, `n_estimators=100`)
 
-### 2. Seq2Seq LSTM Architecture (Keras / TensorFlow)
+### 2. Seq2Seq LSTM Architecture
 Designed for continuous 24-hour sequence output:
-
-[Input Layer: (24, 1)]
-│
-[Encoder LSTM: 64 Units, ReLU, Dropout 0.2]
-│
-[RepeatVector: 24 Steps]
-│
-[Decoder LSTM: 64 Units, ReLU, Dropout 0.2]
-│
-[TimeDistributed Dense: 1 Unit] ──> Output Shape: (24, 1)
-
+* **Input Layer:** Historical 24-hour energy sequence shape `(24, 1)`.
+* **Encoder LSTM:** 64 units with ReLU activation and 0.2 Dropout.
+* **Repeat Vector:** Bridges encoder to decoder across 24 output time steps.
+* **Decoder LSTM:** 64 units with ReLU activation and 0.2 Dropout.
+* **TimeDistributed Dense:** Dense layer outputting single kW values per hour `(24, 1)`.
 
 ---
 
@@ -88,21 +83,10 @@ As part of the project's theoretical evaluation, **N-BEATS (Neural Basis Expansi
 
 A production-ready microservice architecture strategy for this pipeline includes:
 
-┌─────────────────┐      ┌─────────────────┐      ┌─────────────────┐
-│  Client / Grid  │ ───> │  FastAPI REST   │ ───> │  Feature Prep   │
-│  Monitoring     │      │     Endpoint    │      │ (Pandas Lags)   │
-└─────────────────┘      └─────────────────┘      └─────────────────┘
-│
-▼
-┌─────────────────┐
-│  Inference Engine│
-│ (.keras Model)  │
-└─────────────────┘
-
-
-1. **Model Serialization:** Save optimal weights in modern `.keras` format.
-2. **Containerization:** Docker container packaging the Python runtime, Dependencies, and FastAPI server.
-3. **API Pipeline:** Real-time generation of 24-hour lag and rolling features from incoming operational streams.
+1. **REST API Service:** Built with FastAPI to handle incoming client or grid data requests.
+2. **Feature Pipeline:** Real-time generation of 24-hour lag and rolling window features from operational streams using Pandas.
+3. **Inference Engine:** Loads pre-trained model weights saved in modern `.keras` format to generate fast predictions.
+4. **Containerization:** Packaged inside a Docker container for consistent deployment across cloud infrastructure.
 
 ---
 
