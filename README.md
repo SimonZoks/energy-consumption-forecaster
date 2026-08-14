@@ -100,8 +100,7 @@ A production-ready microservice architecture strategy for this pipeline includes
 
 1. **Clone the repository:**
    ```bash
-   git clone [https://github.com/SimonZoks/energy-consumption-forecaster.git](https://github.com/SimonZoks/energy-consumption-forecaster.git)
-   cd energy-consumption-forecaster
+   git clone https://github.com/SimonZoks/energy-consumption-forecaster.git
 
 
 ---
