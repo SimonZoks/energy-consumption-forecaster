@@ -1,3 +1,4 @@
+```markdown
 # ⚡ Energy Consumption Forecaster
 
 > **Domain:** Smart Home / Energy Management  
