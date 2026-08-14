@@ -1,4 +1,3 @@
-```markdown
 # ⚡ Energy Consumption Forecaster
 
 > **Domain:** Smart Home / Energy Management  
@@ -105,10 +104,12 @@ A production-ready microservice architecture strategy for this pipeline includes
    cd energy-consumption-forecaster
 
 
+---
+
 1. Install dependencies:
 pip install -r requirements.txt
 
----
+
 2. Prepare the Data Directory:
 Place household_power_consumption.txt inside the data/ subfolder:
 
@@ -117,6 +118,6 @@ Place household_power_consumption.txt inside the data/ subfolder:
 ├── main_notebook.ipynb
 └── README.md
 
----
+
 3. Run Jupyter Notebook:
 jupyter notebook main_notebook.ipynb
