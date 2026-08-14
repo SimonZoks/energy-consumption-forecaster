@@ -100,12 +100,14 @@ A production-ready microservice architecture strategy for this pipeline includes
 
 1. **Clone the repository:**
    ```bash
-   git clone [https://github.com/your-username/energy-consumption-forecaster.git](https://github.com/your-username/energy-consumption-forecaster.git)
+   git clone [https://github.com/SimonZoks/energy-consumption-forecaster.git](https://github.com/SimonZoks/energy-consumption-forecaster.git)
    cd energy-consumption-forecaster
+
+
 Install dependencies:
 
-Bash
 pip install -r requirements.txt
+
 Prepare the Data Directory:
 Place household_power_consumption.txt inside the data/ subfolder:
 
@@ -113,7 +115,6 @@ Place household_power_consumption.txt inside the data/ subfolder:
 │   └── household_power_consumption.txt
 ├── main_notebook.ipynb
 └── README.md
-Run Jupyter Notebook:
 
-Bash
+Run Jupyter Notebook:
 jupyter notebook main_notebook.ipynb
