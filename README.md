@@ -14,6 +14,15 @@ This project implements an end-to-end Machine Learning & Deep Learning forecasti
 
 ---
 
+## 📊 Exploratory Data Analysis (EDA)
+
+An extensive exploratory analysis was performed on the raw minute-level electric power dataset prior to feature engineering and modeling:
+
+* **Resampling & Aggregation Insights:** Aggregating raw minute-level active power into hourly means ($1\text{h}$) effectively reduced sensor noise while preserving key diurnal load profiles.
+* **Diurnal & Weekly Load Patterns:** Time-series decomposition revealed prominent double-peak daily consumption cycles (morning and evening household activity) alongside consistent weekend vs. weekday load variations.
+* **Autocorrelation & Seasonality:** Autocorrelation Function (ACF) plots confirmed heavy lag correlations at $t-24$ (daily) and $t-168$ (weekly) intervals, directly driving the lag feature engineering strategy.
+* **Appliance Spikes & Variance:** Distribution profiling identified right-skewed, heavy-tailed power distributions caused by high-wattage appliance activation, explaining short-term target variance during peak hours.
+
 ## 🛠️ Key Technical Features
 
 * **Data Preprocessing & Resampling:** Cleaning, linear interpolation of missing values, and resampling minute-level raw consumption metrics to hourly aggregates ($1\text{h}$ mean).
